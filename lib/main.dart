@@ -1,8 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_kit/responsive_kit.dart';
+import 'package:takos/global/text_styles/customTextStyles.dart';
+import 'package:takos/global/widgets/custom_margins.dart';
+import 'package:takos/global/widgets/custom_search_bar.dart';
 
 import 'firebase_options.dart';
+import 'global/colors/my_colors.dart';
+import 'global/widgets/CustomAppBar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -40,6 +45,27 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context, 800, 360);
-    return const Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          customAppBar(
+            title: 'Home Screen',
+            contents: [
+              Icon(
+                Icons.person,
+                color: Colors.black,
+                size: SizeConfig().getMyDynamicFontSize(28),
+              ),
+              const CustomSearchBar(),
+              Icon(
+                Icons.refresh,
+                color: Colors.black,
+                size: SizeConfig().getMyDynamicFontSize(28),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
