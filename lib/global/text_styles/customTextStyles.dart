@@ -7,4 +7,19 @@ class CustomTextStyles {
     fontSize: SizeConfig().getMyDynamicFontSize(17),
     color: MyColors().grey,
   );
+
+  final heading1 = TextStyle(
+    fontSize: SizeConfig().getMyDynamicFontSize(20),
+    color: MyColors().grey,
+  );
+
+  final smallText = TextStyle(
+    fontSize: SizeConfig().getMyDynamicFontSize(13),
+    color: MyColors().grey,
+  );
+
+  final body = TextStyle(
+    fontSize: SizeConfig().getMyDynamicFontSize(14),
+    color: MyColors().grey,
+  );
 }
