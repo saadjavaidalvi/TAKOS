@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "takos" "\0"
+            VALUE "FileDescription", "TAKOS" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "takos" "\0"
+            VALUE "InternalName", "TAKOS" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "takos.exe" "\0"
-            VALUE "ProductName", "takos" "\0"
+            VALUE "ProductName", "TAKOS" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
