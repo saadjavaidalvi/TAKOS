@@ -1,5 +1,28 @@
 {
   "database": {
     "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "port": 8000,
+      "host": "0.0.0.0"
+    }
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
