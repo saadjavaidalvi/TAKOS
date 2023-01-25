@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:takos/src/models/task_model.dart';
 
-class TaskBoard {
+class TaskBoard with ChangeNotifier {
   String id;
   String name;
   List<TaskModel>? tasks;
@@ -12,6 +12,13 @@ class TaskBoard {
     this.name = '',
     this.tasks,
   });
+
+  void update(TaskBoard taskBoard) {
+    id = taskBoard.id;
+    name = taskBoard.name;
+    tasks = taskBoard.tasks;
+    notifyListeners();
+  }
 
   TaskBoard copyWith({
     String? id,
