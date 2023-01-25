@@ -4,22 +4,35 @@ import 'package:takos/global/colors/my_colors.dart';
 
 class CustomTextStyles {
   final heading2 = TextStyle(
-    fontSize: SizeConfig().getMyDynamicFontSize(17),
+    fontSize: SizeConfig().getMyDynamicWidth(
+      17,
+      maxlimit: 17,
+    ),
     color: MyColors().grey,
   );
 
   final heading1 = TextStyle(
-    fontSize: SizeConfig().getMyDynamicFontSize(20),
+    fontSize: SizeConfig().getMyDynamicWidth(
+      20,
+      maxlimit: 20,
+    ),
+    // SizeConfig().getMyDynamicFontSize(20),
     color: MyColors().grey,
   );
 
   final smallText = TextStyle(
-    fontSize: SizeConfig().getMyDynamicFontSize(13),
+    fontSize: SizeConfig().getMyDynamicWidth(
+      13,
+      maxlimit: 13,
+    ),
     color: MyColors().grey,
   );
 
   final body = TextStyle(
-    fontSize: SizeConfig().getMyDynamicFontSize(14),
+    fontSize: SizeConfig().getMyDynamicWidth(
+      14,
+      maxlimit: 14,
+    ),
     color: MyColors().grey,
   );
 }

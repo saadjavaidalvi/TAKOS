@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_kit/responsive_kit.dart';
@@ -11,6 +12,11 @@ import 'global/widgets/CustomAppBar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  if (true) {
+    FirebaseFirestore.instance.useFirestoreEmulator('localhost', 8080);
+  }
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -56,13 +62,19 @@ class _MyHomePageState extends State<MyHomePage> {
               Icon(
                 Icons.person,
                 color: Colors.black,
-                size: SizeConfig().getMyDynamicFontSize(28),
+                size: SizeConfig().getMyDynamicWidth(
+                  28,
+                  maxlimit: 28,
+                ),
               ),
               const CustomSearchBar(),
               Icon(
                 Icons.refresh,
                 color: Colors.black,
-                size: SizeConfig().getMyDynamicFontSize(28),
+                size: SizeConfig().getMyDynamicWidth(
+                  28,
+                  maxlimit: 28,
+                ),
               ),
             ],
           ),
@@ -73,15 +85,12 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget bodyWidget() {
-    return Container(
-      // color: Colors,
-      child: Column(
-        children: [
-          mainBoardHeadingWidget(),
-          listOfBundleTasks(),
-          createNewTaskBunddleButton(),
-        ],
-      ),
+    return Column(
+      children: [
+        mainBoardHeadingWidget(),
+        listOfBundleTasks(),
+        createNewTaskBunddleButton(),
+      ],
     );
   }
 
@@ -118,7 +127,10 @@ class _MyHomePageState extends State<MyHomePage> {
           Icon(
             Icons.local_fire_department_sharp,
             color: MyColors().grey,
-            size: SizeConfig().getMyDynamicFontSize(20),
+            size: SizeConfig().getMyDynamicWidth(
+              20,
+              maxlimit: 20,
+            ),
           )
         ],
       ),
@@ -171,7 +183,10 @@ class _MyHomePageState extends State<MyHomePage> {
               Icon(
                 Icons.local_fire_department_sharp,
                 color: MyColors().grey,
-                size: SizeConfig().getMyDynamicFontSize(20),
+                size: SizeConfig().getMyDynamicWidth(
+                  20,
+                  maxlimit: 20,
+                ),
               )
             ],
           ),
@@ -185,7 +200,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 Icon(
                   Icons.add,
                   color: MyColors().blue,
-                  size: SizeConfig().getMyDynamicFontSize(18),
+                  size: SizeConfig().getMyDynamicWidth(
+                    18,
+                    maxlimit: 18,
+                  ),
                 ),
                 Container(
                   margin: cmargin(
