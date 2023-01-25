@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1086666682711",
+    "firebase_url": "https://takos-7179e-default-rtdb.firebaseio.com",
+    "project_id": "takos-7179e",
+    "storage_bucket": "takos-7179e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086666682711:android:55a82906f3f2fb38e4ce12",
+        "android_client_info": {
+          "package_name": "com.example.takos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086666682711-fprhecc94jufhgtl47t5qnq40qn8m5uc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6v-uAwOV-mKEWL4eerKSC_rIBA8dLRv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086666682711-fprhecc94jufhgtl47t5qnq40qn8m5uc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1086666682711-cnllnj3pnmo6nqatv56al310ehb6tmmq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.takos"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
